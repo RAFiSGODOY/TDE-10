@@ -9,25 +9,14 @@ server.get("/helth", function (req, res) {
     });
 })
 
-const tarefa = [
+ let tarefa=[
     {
         id: 1,
         name: "Retirar o lixo",
         description:"Ir ate os lixos da casa e leva-los para lixeira la fora",
-        isDone: false 
+        isDone: false
     },
-    {
-        id: 2,
-        name: "Encher as garrafas de agua",
-        description:"Ir até a geladeira e encher as garrafas de agua",
-        isDone: true
-    },
-    {
-        id: 3,
-        name: "Encher as formas de gelo",
-        description:"ir até o congelador e encher cada forminha de gelo sem gelo com agua",
-        isDone: true
-    }
+    
 ]
 
 server.get("/tarefa", (req, res) => {
@@ -59,7 +48,7 @@ server.post('/tarefa', (req, res)=> {
     })
 })
 
-server.put('/tarefas/id:', (req, res)=> {
+server.put('/tarefas/:id', (req, res)=> {
     const id = Number(req.params.id);
     const tarefa = tarefa.find((tarefa)=> {
         return tarefa.id === id;
