@@ -1,0 +1,19 @@
+{
+  "name": "server-tde",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tde10.js",
+  "scripts": {
+    "start": "node tde10.js",
+    "dev": "nodemon tde10.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
